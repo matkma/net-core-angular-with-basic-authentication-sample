@@ -1,0 +1,34 @@
+﻿@model WebApplication1.DataTransferObjects.LoginUserDto
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td></td>
+                <td>@ViewBag.ErrMsg</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBoxFor(m => m.Email)</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>@Html.PasswordFor(m => m.Password)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Login</button></td>
+            </tr>
+        </table>
+    }
+    <p>
+        Don't have account? <a href="/Account/Register">REGISTER N O W FOR F R E E</a>
+    </p>
+</body>
+</html>
